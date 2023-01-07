@@ -1,0 +1,10 @@
+
+<nz-card style="width:300px;" [nzTitle] = "game.title" [nzExtra]="extraTemplate">
+  <img [src] = "game.image">
+  <p>{{game.description}}</p>
+  </nz-card>
+  <ng-template #extraTemplate>
+    <!-- <button nz-button nzType="primary" (click) = "goToFirstPage()">Primary Button</button> -->
+    <app-game-modal [modalDescription]="game"></app-game-modal>
+  </ng-template>
+  

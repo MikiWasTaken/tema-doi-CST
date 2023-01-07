@@ -1,0 +1,7 @@
+<button nz-button [nzType]="'primary'" (click)="showModal()"><span>Show Modal</span></button>
+
+<nz-modal [(nzVisible)]="isVisible" [nzTitle]="modalDescription.title" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container *nzModalContent>
+    <app-game-about [about] = "modalDescription"></app-game-about>
+    </ng-container>
+  </nz-modal>
